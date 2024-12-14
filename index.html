@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="[Your Company Name] - Leading IT solutions provider offering web development, mobile apps, and IT consulting services to help businesses grow.">
+    <meta name="keywords" content="IT solutions, web development, mobile apps, IT consulting, technology company">
+    <meta name="author" content="[Your Company Name]">
+    <title>[Your Company Name] - Innovating Technology</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header (Hero Section) -->
+    <header class="hero" aria-labelledby="hero-title">
+        <div class="container">
+            <h1 id="hero-title">Aura It services</h1>
+            <p>Innovating Technology, Empowering Businesses</p>
+            
+            <div class="hero-image">
+                <img src="bg.png" alt="Web Development Illustration" />
+            </div>
+
+            <a href="#services" class="cta" aria-label="Get Started with our services">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Our Services Section -->
+    <section id="services" aria-labelledby="services-title">
+        <div class="container">
+            <h2 id="services-title">Our Services</h2>
+            <div class="services">
+                <div class="service" aria-labelledby="service1">
+                    <h3 id="service1">Web Development</h3>
+                    <p>Creating stunning websites for your business using industry-leading tools and platforms.</p>
+                    <ul>
+                        <li>Technology: WordPress</li>
+                        <li>Features: Custom Themes, Plugins, and eCommerce Integration</li>
+                        <li>Optimized for: SEO, Performance, and User Experience</li>
+                    </ul>
+                    <img src="web-development.png" alt="Web Development Illustration" />
+                </div>
+                <div class="service" aria-labelledby="service2">
+                    <h3 id="service2">Mobile Apps</h3>
+                    <p>Custom app solutions for Android and iOS platforms using modern frameworks and languages.</p>
+                    <ul>
+                        <li>Technologies: Java, Kotlin, Flutter</li>
+                        <li>App Types: Business Apps, eLearning, Social Media</li>
+                        <li>Focus: Performance, Security, and User-Centric Design</li>
+                    </ul>
+                    <img src="app-development.png" alt="Mobile App Development Illustration" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" aria-labelledby="contact-title">
+        <div class="container">
+            <h2 id="contact-title">Contact Us</h2>
+            <form id="contact-form" onsubmit="sendMessage(event)">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- About Us Section with 3 lines -->
+    <section id="about" aria-labelledby="about-title">
+        <div class="container">
+            <h2 id="about-title">About Us</h2>
+            <p>We are a leading IT solutions provider, offering top-notch services to drive business growth.</p>
+            <p>Founded in 2010, [Your Company Name] has been at the forefront of technological innovation, delivering cutting-edge solutions that cater to businesses of all sizes.</p>
+            <p>Our mission is to empower businesses by providing tailor-made IT solutions that not only solve challenges but also unlock new opportunities.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 [Your Company Name]. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function sendMessage(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Format WhatsApp message
+            const whatsappMessage = `Hello!%0A%0AMy Name: ${encodeURIComponent(name)}%0AMy Email: ${encodeURIComponent(email)}%0AMessage: ${encodeURIComponent(message)}`;
+
+            // Replace with your WhatsApp number (include country code, omit the +)
+            const whatsappNumber = "+917974496230";
+
+            // Redirect to WhatsApp
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+</body>
+</html>
